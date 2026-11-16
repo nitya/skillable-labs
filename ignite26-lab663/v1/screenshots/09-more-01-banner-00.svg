@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="More Labs · Model Fundamentals — One tent, one launch: What can MAI models do for a real product launch? Microsoft Ignite 2026 · LAB 663">
+  <title>More Labs · Model Fundamentals — One tent, one launch: What can MAI models do for a real product launch? Microsoft Ignite 2026 · LAB 663</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#04083A"/>
+      <stop offset="0.6" stop-color="#080A64"/>
+      <stop offset="1" stop-color="#2213A9"/>
+    </linearGradient>
+    <linearGradient id="stripe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#291EB7"/>
+      <stop offset="0.5" stop-color="#52FC75"/>
+      <stop offset="1" stop-color="#FCD42A"/>
+    </linearGradient>
+    <clipPath id="card"><rect width="1200" height="300" rx="28"/></clipPath>
+  </defs>
+  <g clip-path="url(#card)" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+    <rect width="1200" height="300" fill="url(#sky)"/>
+    <circle cx="1030" cy="150" r="70" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="2"/>
+    <circle cx="1030" cy="150" r="106" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="2"/>
+    <circle cx="1030" cy="150" r="142" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="2"/>
+    <circle cx="1030" cy="150" r="178" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="2"/>
+    <circle cx="1030" cy="150" r="214" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="2"/>
+    <circle cx="1030" cy="150" r="250" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="2"/>
+    <circle cx="1030" cy="150" r="286" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="2"/>
+    <circle cx="1030" cy="150" r="322" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="2"/>
+    <path d="M0 300 L170 214 L280 262 L430 168 L590 250 L720 196 L880 270 L1010 206 L1200 280 L1200 300 Z" fill="#fff" fill-opacity="0.08"/>
+    <path d="M0 300 L120 256 L250 284 L400 236 L560 292 L700 258 L860 296 L1200 262 L1200 300 Z" fill="#fff" fill-opacity="0.12"/>
+    <circle cx="1030" cy="150" r="88" fill="#fff" fill-opacity="0.2"/>
+    <text x="1030" y="154" font-size="104" text-anchor="middle" dominant-baseline="middle" font-family="'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif">🧭</text>
+    <text x="64" y="84" font-size="20" font-weight="700" letter-spacing="3" fill="#fff" fill-opacity="0.85">MORE LABS · MODEL FUNDAMENTALS</text>
+    <text x="64" y="156" font-size="60" font-weight="800" fill="#fff">One tent, one launch</text>
+    <text x="64" y="208" font-size="26" font-style="italic" fill="#fff" fill-opacity="0.95">What can MAI models do for a real product launch?</text>
+    <text x="64" y="282" font-size="16" font-weight="600" letter-spacing="1" fill="#fff" fill-opacity="0.7">MICROSOFT IGNITE 2026 · LAB 663</text>
+    <rect y="294" width="1200" height="6" fill="url(#stripe)"/>
+  </g>
+</svg>
