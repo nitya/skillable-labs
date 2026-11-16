@@ -1,3 +1,5 @@
+@lab.Title
+
 <!--
   LAB663 Skillable instructions file for loading instructions from a GitHub repo source.
 --> 
