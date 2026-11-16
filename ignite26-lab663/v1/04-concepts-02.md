@@ -1,6 +1,6 @@
-# 4.2 Compare a big and a small model
+# 4.2 Under the hood: model selection
 
-**What we'll do:** While the optimizer and insights work, let's learn the ideas behind the climb. First, send the same two questions to a big and a small model, and see how model choice changes speed, tokens, and quality.
+**What we'll do:** While the optimizer and insights work, let's look under the hood. On the next few pages, we explore how model choice affects the three dials: cost, quality, and latency. First, we send the same two questions to a big and a small model.
 
 1. [] In the Foundry portal, select **Models** in the left menu, then **gpt-5.4**. Its playground opens.
 
@@ -28,7 +28,7 @@
 
 > [!Knowledge] In our test, both models picked the Alpine Explorer, but the small one was faster and used a fraction of the tokens. The real question isn't "which model is best?" but "which questions need the big one?"
 
-> [+Hint] Ask Copilot: big or small model?
+> [+Hint] OPTIONAL - Ask Copilot: big or small model?
 >
 > ++When should I pick gpt-5.4-mini over gpt-5.4? Answer in two sentences.++
 

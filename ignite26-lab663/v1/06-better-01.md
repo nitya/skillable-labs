@@ -1,34 +1,36 @@
-# 6.1 Turn good into a number
+# 6.1 Read the optimizer results
 
-**What we'll do:** Read the rubric Foundry drafted from our traces and gaps, see how it connects to the insights, then use it to score **v0** and **v1** on the same questions.
+**What we'll do:** See what the agent optimizer found: how each candidate scored with our rubric, what it changed, and what the run cost.
 
-1. [] Switch to **05-make-it-better.ipynb**. If the optimizer cell in section 5.6 is still running, click the **stop** button next to it.
+1. [] In the Foundry portal, open **trailmate**, select the **Optimize** tab, and open our run. When it finishes, **Candidate results** show each candidate's rubric score next to the baseline, agent Version 2, with average tokens and latency.
 
-    > [!Note] Stopping the cell only stops the notebook from waiting. The optimizer job keeps running in Foundry, and we'll pick it up again on page 6.2.
+    ![Final optimizer results: baseline 0.759, candidate_1 0.822 marked Best, candidate_2 0.802, and candidate_3 0.76](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/06-better-01-candidates.png)
 
-    <!-- VERIFY: interrupting the wait doesn't cancel the optimizer job -->
+    > [!Note] Your results will differ. A different candidate may win, or none may beat the baseline. If none does, keeping Version 2 is the right decision. In our test, the run took about 10 minutes, and all three candidates beat the baseline of 0.759.
 
-1. [] In the Foundry portal, open **Evaluations**, then the **Evaluator catalog** tab. **Our TrailMate rubric** is listed as a custom rubric, next to Microsoft's built-in evaluators.
+1. [] On the best candidate, select **View changes**. The short Version 2 instructions became a detailed set of rules, for example to only make claims the product files support.
 
-    ![The Evaluator catalog listing Our TrailMate rubric as a custom rubric above the built-in evaluators](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/06-better-01-evaluator-catalog.png)
+    ![The changes for candidate_1, comparing the short baseline prompt with the much longer candidate prompt](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/06-better-01-view-changes.png)
 
-1. [] Select **Our TrailMate rubric** and scroll to **Dimensions**. Each one is a weighted check the judge scores from 1 to 5.
+1. [] Scroll up to **Run overview** and select **View details** next to **Total tokens**. It shows what the run itself cost, by phase.
 
-    ![The rubric's seven weighted dimensions, from source_grounded_answer to general_quality](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/06-better-01-rubric-dimensions.png)
+    ![Token usage for the run: about 1.9 million tokens and an estimated $5.37, mostly from running the agent and scoring responses](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/06-better-01-token-usage.png)
 
-1. [] Match the dimensions to what we've seen:
-    - **source_grounded_answer** and **missing_or_conflicting_evidence_handling** cover the hallucination insights and our "making things up" gap.
-    - **semantic_claim_precision** names our overclaiming gap: "water-resistant" becoming "waterproof".
-    - **scope_and_role_adherence** says off-topic requests should be declined. The built-in evaluators and insights missed that the hot chocolate recipe was out of lane. Our rubric knows TrailMate's job.
-1. [] Jump to section **5.5** and run its two code cells to score v0 and v1 twice each. It takes a few minutes.
-1. [] Confirm the scoreboard has two rows, each with a score, a spread, and **errored** at 0.
+    > [!Note] Our run used about 1.9 million tokens, an estimated $5.37, above the $4.88 ceiling estimated on page 3.2. Optimizing costs real money, so we check the measured cost, not just the estimate.
 
-    <!-- TODO screenshot: 06-better-01-scoreboard.png | The v0 and v1 scoreboard and the per-category table -->
+1. [] Recall the rubric dimensions from page 3.2. Your rubric may have different ones, so look for the same ideas:
+    - Grounding dimensions, like **source_grounded_answer**, cover the hallucination insights from page 5.3.
+    - A claim-precision dimension catches "water-resistant" becoming "waterproof".
+    - A scope dimension says off-topic requests should be declined. The built-in evaluators passed the hot chocolate recipe, but our rubric knows TrailMate's job.
 
-> [+Hint] Ask Copilot: summarize the scores
+> [+Hint] I see "Ran into a deserialization error" in the notebook
 >
-> ++In three bullets, summarize what the rubric in section 5.3 of labs/core/05-make-it-better.ipynb checks and how v0 and v1 scored in section 5.5. Don't change any files.++
+> The optimizer cell in VS Code may print this Azure SDK warning. It tried to read a reply that had no body and ignored it. If the run finished on the **Optimize** tab, it's safe to ignore. If something else looks wrong, paste the message into Copilot Chat and ask what it means.
+
+> [+Hint] OPTIONAL - Ask Copilot: what did the optimizer do?
+>
+> ++/microsoft-foundry Summarize my latest agent optimization run for trailmate in three bullets: the baseline score, the best candidate, and what it changed. Do not change anything.++
 
 ---
 
-> [!Note] **Success:** We just turned "good" into a number, using a ruler we checked ourselves.
+> [!Note] **Success:** We just read how the optimizer turned "good" into a score, which candidate won, and what it cost.

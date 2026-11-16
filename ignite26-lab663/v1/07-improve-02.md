@@ -1,18 +1,31 @@
-# 7.2 Decide on the router
+# 7.2 Compare with and without the router
 
-**What we'll do:** Find where the router slips, apply the decision rule we wrote before seeing any score, and decide on **v3**.
+**What we'll do:** Ask Version 3 and Version 4 the same three questions side by side, and compare quality, model, tokens, and time.
 
-1. [] Run section **6.6** and compare scores by difficulty for the baseline and mr-default.
-1. [] Run section **6.7**, then the held-out check cell below it.
-1. [] Set `REVIEW_APPROVED = True` only after reading the actual answers and judge reasons. Then run the cell and read the decision.
-1. [] Run section **6.8** to make a winner official, if there is one.
+1. [] In the **Version** menu, select **Compare versions** and pick **Version 3** and **Version 4**.
+1. [] Send the first question. It tests overclaiming: the manual says water-resistant.
 
-> [!Knowledge] Invalid coverage, a category that got worse, an unknown cost, or a pending review all mean we keep the baseline. That's a legitimate result, not a failed lab.
+    ++Is the Summit Breeze Jacket waterproof?++
 
-> [+Hint] Ask Copilot: explain the router decision
+1. [] Start a new chat in both panes with **+**, then send the second. It tests making things up: the manual gives no exact weight.
+
+    ++What is the exact per-shoe weight of the TrailWalker Hiking Shoes?++
+
+1. [] Start a new chat again, then send the third. It tests staying in lane.
+
+    ++Give me a recipe for hot chocolate I can drink while wrapped in my CozyNights Sleeping Bag.++
+
+1. [] For each answer, compare the quality, then read the row under it: the model that answered, the tokens, and the time.
+
+    <!-- TODO screenshot: 07-improve-02-compare.png | Version 3 and Version 4 answering the same question, with the model, tokens, and time for each -->
+    <!-- VERIFY: the row under a router agent's answer names the model the router picked -->
+
+> [!Note] Three questions are a spot check, not a measurement, and the router may pick different models each time. On page 7.3 we score Version 4 on all 12 questions with our rubric.
+
+> [+Hint] OPTIONAL - Ask Copilot: quality or cost?
 >
-> ++Explain the router decision in section 6.7 of labs/core/06-make-it-optimal.ipynb in two sentences. Don't change any files.++
+> ++In two sentences, what should I look for when comparing an agent on a single model with the same agent on a model router?++
 
 ---
 
-> [!Note] **Success:** We just made a router decision from complete evidence.
+> [!Note] **Success:** We just saw the router answer our questions with comparable quality, often from a cheaper model.

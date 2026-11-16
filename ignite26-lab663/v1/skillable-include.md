@@ -88,15 +88,15 @@
 
 ===
 
-[!include[](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/06-better-03.md)]
-
-===
-
 [!include[](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/07-improve-01.md)]
 
 ===
 
 [!include[](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/07-improve-02.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/07-improve-03.md)]
 
 ===
 
@@ -109,6 +109,10 @@
 ===
 
 [!include[](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/09-more-02.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/09-more-03.md)]
 
 ===
 

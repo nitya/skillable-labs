@@ -6,15 +6,15 @@
 
 Building the first agent is easy. Keeping it reliable and cost-effective takes continuous improvement. Today we practise continuous improvement on **TrailMate**, an outdoor-gear support agent. We change one thing at a time and measure each change. Each step that moves us toward our goal is part of the **climb**.
 
-| Stage | Where | What we do | Version |
+| Stage | Where | What we do | Agent version |
 |:------|:------|:-----------|:--------|
 | 1 Setup | VS Code | Get ready, check everything works | |
-| 2 Meet TrailMate | Foundry portal | Try the starting agent and plan the climb | v0 |
-| 3 Kick-off | VS Code | Create v1 and start the optimizer, so it works while we explore | v1 |
+| 2 Meet TrailMate | Foundry portal | Try the starting agent and plan the climb | Version 1 |
+| 3 Kick-off | VS Code | Create Version 2 and start the optimizer, so it works while we explore | Version 2 |
 | 4 Know the concepts | Foundry portal | Start insights, compare models, try the model router | |
-| 5 See it work | Foundry portal | Compare v0 and v1, check the monitor, read the insights | v1 |
-| 6 Make it better | VS Code | A rubric, the agent optimizer, promote or keep | v2 |
-| 7 Keep improving | VS Code | Right-size models with the model router | v3 |
+| 5 See it work | Foundry portal | Compare Versions 1 and 2, check the monitor, read the insights | Version 2 |
+| 6 Make it better | Foundry portal | Read the optimizer results, promote the winner | Version 3 |
+| 7 Keep improving | Foundry portal | Switch to the model router, compare, and score it | Version 4 |
 | 8 Wrap | | Look back at the climb | |
 
 ## How to use these pages
@@ -24,7 +24,7 @@ Building the first agent is easy. Keeping it reliable and cost-effective takes c
 1. [] Text shown ++like this++ is **copy text**: click it to copy, then paste it yourself.
 1. [] Each step has a checkbox. Checking the last box on a page checks the ones above it.
 
-> [!Hint] **Stuck? Ask Copilot first.** Most pages end with an optional **Ask Copilot** hint: a prompt to paste into Copilot Chat that explains or summarizes what just happened, so we can skip reading long notebook output. We set up Copilot Chat in the next stage, on page 1.2.
+> [!Hint] **Stuck? Ask Copilot first.** Most pages end with an **OPTIONAL - Ask Copilot** hint: a prompt to paste into Copilot Chat that explains or summarizes what just happened, so we can skip reading long notebook output. Skip these if you're short on time. We set up Copilot Chat in the next stage, on page 1.2.
 
 ---
 

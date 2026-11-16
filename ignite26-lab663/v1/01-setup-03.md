@@ -21,7 +21,7 @@
 >
 > ++In notebook 01, this check failed with the message below. What does it mean, and what should I try? Don't change any files.++
 
-> [+Hint] Ask Copilot: what did we check?
+> [+Hint] OPTIONAL - Ask Copilot: what did we check?
 >
 > ++Summarize what labs/core/01-setup-and-validate.ipynb checked, in three bullets. Don't change any files.++
 
