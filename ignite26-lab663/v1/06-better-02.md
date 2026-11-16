@@ -22,7 +22,7 @@
 
 1. [] Notice the scores. In our test, Version 3 declined and redirected to the sleeping bag, yet the built-in **AI Quality** gave the recipe 100% and the refusal 50%. Built-in evaluators don't know TrailMate's job. Our rubric does.
 
-> [!Knowledge] We saw one optimization run, with one lever: the instructions. A real team would also check the candidate on questions it never saw before promoting it. The More lab on page 9.1 walks through that.
+> [!Knowledge] We saw one optimization run, with one lever: the instructions. A real team would also check the candidate on questions it never saw before promoting it. The More lab on page 9.2 walks through that.
 
 > [+Hint] OPTIONAL - Ask Copilot: why did Version 3 decline?
 >

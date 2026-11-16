@@ -112,8 +112,4 @@
 
 ===
 
-[!include[](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/09-more-03.md)]
-
-===
-
 [!include[](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/10-ref-01.md)]
