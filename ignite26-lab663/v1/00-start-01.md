@@ -8,7 +8,7 @@
 
 **The scenario.** TrailMate is a support agent for an outdoor-gear store. It answers customer questions from the store's product manuals. It works, but it sometimes overstates what a product can do, it answers questions that aren't its job, and it sends every question to the same model, whether the question is easy or hard.
 
-**What we'll learn.** We improve TrailMate one change at a time and measure each change in Microsoft Foundry:
+**What we'll learn.** We improve TrailMate one change at a time and measure each change in Microsoft Foundry. By the end, we have the tools and the workflow we need for continuous improvement of our own AI agents:
 
 | Tool | What it does for us |
 |:-----|:--------------------|
