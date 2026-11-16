@@ -1,0 +1,85 @@
+<!--
+  LAB540 - Skillable master include file. GENERATED - do not edit by hand.
+  Regenerate with: ./workshop/skillable/generate-skillable-copy.sh
+
+  Paste the contents of this file into the Skillable lab profile's instructions
+  (Edit Instructions). Skillable pulls each page live from this GitHub repo, in
+  order, separated by the === page break.
+
+  Source repo:   nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry
+  Source branch: lods-aiewf26-refresh-test
+  To target a different repo/branch: REPO=<owner/name> BRANCH=<branch> ./generate-skillable-copy.sh
+-->
+
+@lab.Title
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/00-intro.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/01-setup-01.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/01-setup-02.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/01-setup-03.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/01-setup-04.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/02-observe-01.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/02-observe-02.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/02-observe-03.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/02-observe-04.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/02-observe-05.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/03-optimize-01.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/03-optimize-02.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/03-optimize-03.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/03-optimize-04.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/03-optimize-05.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/03-optimize-06.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/03-optimize-07.md)]
+
+===
+
+[!include[](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/refs/heads/aiewf26-refresh-test/workshop/skillable/03-optimize-08.md)]
+

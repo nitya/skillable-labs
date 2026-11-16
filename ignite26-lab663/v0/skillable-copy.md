@@ -1,0 +1,443 @@
+@lab.Title
+
+<!--
+  LAB663 Skillable instructions. GENERATED, do not edit by hand.
+  Regenerate with: bash instructions/skillable/scripts/generate-skillable-copy.sh
+  Mode: full. Source: the page files in instructions/skillable/
+  Paste everything in this file into the Skillable lab profile (Edit Instructions).
+-->
+
+# Sign in to your lab
+
+**What we'll do:** Sign in to the virtual machine, then to GitHub, so GitHub Copilot works in VS Code.
+
+1. [] Check that you see the **Instructions** and **Resources** tabs on the right, and the virtual machine's sign-in screen on the left.
+
+    <!-- TODO screenshot: 00-start-01-lab-tabs.png | Lab interface with the Instructions and Resources tabs and the VM sign-in screen -->
+
+1. [] Click in the password field on the virtual machine, then click the password below to type it in.
+
+    +++@lab.VirtualMachine(Win11-Pro-Base).Password+++
+
+1. [] On the virtual machine, open **Microsoft Edge** and go to the GitHub Enterprise sign-in page.
+
+    +++https://github.com/enterprises/skillable-events/sso+++
+
+1. [] Sign in with your lab credentials. We use the same ones for GitHub and Azure.
+
+    | Credential | Value |
+    |:-----------|:------|
+    | Username | +++@lab.CloudPortalCredential(User1).Username+++ |
+    | TAP | +++@lab.CloudPortalCredential(User1).AccessToken+++ |
+
+    <!-- TODO screenshot: 00-start-01-github-signed-in.png | GitHub showing the signed-in lab account after SSO -->
+
+1. [] Leave Edge open. We'll come back to it.
+
+> [!Alert] Use the lab credentials, **not** a personal GitHub or Azure account. If sign-in fails, raise your hand.
+
+---
+
+> [!Note] **Success:** We just signed in to the virtual machine and to GitHub with our lab identity.
+
+===
+
+# Set up GitHub Copilot Chat
+
+**What we'll do:** Sign in to GitHub Copilot in VS Code and check it can reach our Foundry project.
+
+1. [] In VS Code, click the **Sign in** button in the top bar, next to the Copilot Chat icon.
+1. [] Select **Continue with GitHub** and finish sign-in with the same lab credentials. Approve the browser prompts to authorize and return to VS Code.
+
+    <!-- TODO screenshot: 01-setup-02-continue-with-github.png | The Sign in to use GitHub Copilot menu with Continue with GitHub highlighted -->
+
+1. [] Open Copilot Chat and send this message.
+
+    ++Hello! In two sentences, what is this repository about?++
+
+1. [] Check that Copilot answers. If it asks to sign in to Azure, use the lab account.
+1. [] Now check Copilot can reach Foundry. Send this message and wait for a list of agents.
+
+    ++/microsoft-foundry List the agents in my Foundry project. Do not change anything.++
+
+    <!-- TODO screenshot: 01-setup-02-copilot-agents.png | Copilot Chat listing the trailmate agent from the Foundry project -->
+    <!-- VERIFY: the Foundry skill and Azure MCP sign-in work on the VM with this prompt -->
+
+> [+Hint] Copilot shows an error
+>
+> If you see a license or access error, check that you signed in with the lab account, not a personal one. If it persists, raise your hand. The license server can take a few minutes to start.
+
+---
+
+> [!Note] **Success:** We just set up GitHub Copilot Chat. It can explain things and talk to our Foundry project whenever we get stuck.
+
+===
+
+# Check your lab environment
+
+Confirm the lab finished preparing your Foundry project before you start.
+
+1. [] On the desktop, open the LAB663 folder in VS Code.
+2. [] In VS Code, open a terminal by selecting **Terminal > New Terminal**.
+
+## Log into Azure
+
+Sign into Azure with the lab credentials provided in the _Resources_ tab. Do **NOT** use your personal Azure account.
+
+1. [] Copy this command into the new terminal and run it
+
+   ++az login --tenant @lab.CloudSubscription.TenantId --use-device-code++
+
+1. [] Follow the instructions provided in the terminal:
+	- Copy the code shown into your clipboard
+   - Navigate to the link provided in your browser - and paste the code
+   - Complete the workflow by selecting the Azure account you logged into earlier
+   - Close this browser tab when the flow is completed - return to VS Code terminal
+   - **Success**: You should see the tenant and subscription you just logged into.
+   
+1. [] Verify you have a .env file at the repository root. It contains your project endpoint and model names, but no keys or passwords.
+   
+> [!alert] Do not run infra/deploy.sh or infra/cleanup.sh here. The lab environment deploys and removes everything for you.
+
+> [!note] *Success:* your local development environment is ready!
+
+===
+
+# Meet TrailMate
+
+Read the story behind the lab before the timed modules start.
+
+1. [] In VS Code, press **Ctrl+P**, open this notebook, and select the **.venv(3.13.14)(Python3.13.14)** kernel.
+
+   ++00-set-the-stage.ipynb++
+
+4. [] Run one cell at a time with **Shift+Enter**, and open the **Outline** view to see the numbered sections.
+6. [] In section 0.1, meet TrailMate: an assistant that answers from ten product manuals and must never make things up.
+7. [] In section 0.3, read the six ways an agent loses a customer's trust.
+8. [] In section 0.4, run the cell and check the table has six rows, three columns, and two cases in every cell.
+9. [] In section 0.5, read how the climb works: insights, a rubric, the optimizer, and the router, one lever at a time.
+10. [] In section 0.7, run the readiness check and confirm it finds your .env file.
+
+> [!note] The "aha" in section 0.8: we aren't here to build a better agent; we're here to build a repeatable way to prove an agent got better.
+
+> [!note] *Success:* notebook 00 runs on Python (LAB663) and section 0.7 finds your .env file. This should take about 5 minutes of reading.
+
+===
+
+# Validate your setup
+
+Check each part of the setup separately, so a failure identifies exactly what needs fixing. This takes about 4 minutes.
+
+1. [] In VS Code, press **Ctrl+P**, open this notebook, and select the **.venv(3.13.14)(Python3.13.14)** kernel.
+
+   ++01-setup-and-validate.ipynb++
+
+1. [] Run the first cells and confirm the printed interpreter is the repository .venv, not a system Python.
+1. [] In section 1.2, confirm the .env check says PASS.
+1. [] In section 1.4, confirm six deployments are listed: two chat models and four mr- router editions.
+
+   > [!note] Guess now: which router edition will be cheapest, and which will be strongest? You will check that guess in Module 6.
+
+1. [] In section 1.5, confirm each model replies, and note which model the router says it picked.
+1. [] In section 1.6, read the v0 instructions. They're one short sentence, on purpose.
+1. [] In section 1.9, confirm the data checks pass.
+1. [] In section 1.10, read the scoreboard and confirm every check passes.
+
+   > [!hint] If some checks are red:
+   >
+   > New role assignments can take up to 10 minutes to apply. Wait a few minutes and rerun the failed cell. If it stays red, keep the exact message and raise your hand. Do not install packages or change the deployment.
+
+1. [] In section 1.11, run the broken call and read the one-line error.
+
+> [!note] The "aha" in section 1.12: "it doesn't work" is useless; "check 5 failed" is a fix.
+
+> [!note] *Success:* every check in section 1.10 passes under your lab account.
+
+===
+
+# Compare two models
+
+Send the same three questions to two models and compare speed, tokens, cost, and answers. This takes about 8 minutes.
+
+1. [] In VS Code, press **Ctrl+P**, open this notebook, and select the **.venv(3.13.14)(Python3.13.14)** kernel.
+
+   ++02-model-selection.ipynb++
+
+1. [] Click on the next notebook to open it: ****
+1. [] Select **Select Kernel** in the top-right corner, then select the **".venv(3.13.14)(Python3.13.14)"** option.
+1. [] Run the cells up to section 2.2, then guess which question the small model will get wrong, if any.
+1. [] In section 2.3, confirm you see a six-row table: three questions, two models.
+1. [] In section 2.4, read both answers to each question and check your guess.
+1. [] In section 2.5, run the cost cell.
+
+   > [!note] Prices in data/pricing.json are a dated snapshot for the westus region. In any other region, the cell shows no dollar figures, because a price from another region is not a verified price. That's the correct result.
+
+1. [] Skip section 2.6 in the timed lab. It makes extra billed calls.
+
+> [!note] The "aha" in section 2.8: the right question isn't "which model is best?" but "which of our questions need the big model?"
+
+> [!note] *Success:* you compared both models on the same questions and read the answers, not just the numbers.
+
+===
+
+# Separate multi-model from multi-modal
+
+Use one model to look at a photo and another to answer from the manuals, then build a tiny router by hand. This takes about 8 minutes.
+
+1. [] In VS Code, press **Ctrl+P**, open this notebook, and select the **.venv(3.13.14)(Python3.13.14)** kernel.
+
+   ++03-multi-model-vs-multimodal.ipynb++
+
+1. [] In section 3.2, set COMPARE_ALL_PHOTOS in the first code cell before you run it.
+
+   | Value | What runs |
+   |:------|:----------|
+   | ++False++ | The core path: one photo, two rows |
+   | ++True++ | All three photos: six rows and extra billed calls |
+
+1. [] Run section 3.2 and confirm each row has a guess and a correctness flag.
+
+   > [!note] A wrong identification is part of the lesson, not a failed lab.
+
+1. [] In section 3.3, confirm you see the photo guess, a warning if it disagrees with the lab label, and an answer about the confirmed product.
+1. [] In section 3.4, confirm you see a six-row table, then compare the router's label with the tagged column.
+1. [] In section 3.5, read why a hand-built router is costly, subjective, and hard to trust.
+
+> [!note] The "aha" in section 3.6: multi-modal is about what comes in; multi-model is about who handles which step.
+
+> [!note] *Success:* you chained two models on a photo question and measured your own router.
+
+===
+
+# Create v1 and leave traces
+
+Change one lever-the instructions-to make v1, then send it practice questions so it leaves traces. Module 4 takes about 12 minutes.
+
+1. [] In VS Code, press **Ctrl+P**, open this notebook, and select the **.venv(3.13.14)(Python3.13.14)** kernel.
+
+   ++04-make-it-work.ipynb++
+
+1. [] In section 4.2, guess which of the three questions v0 gets wrong, then run sections 4.1 and 4.2.
+1. [] Note which answers had wrong facts, invented facts, or should have been declined.
+1. [] Run section 4.3 to create or reuse the insights monitor.
+1. [] Press **Ctrl+P** and open ++instructions-v1.md++ to read what changed, then run section 4.4.
+1. [] Confirm section 4.4 prints a saved v1 version ID.
+1. [] Run section 4.5 so v1 answers all twelve practice questions.
+
+   > [!note] While you wait, read the box about case pr-04. Its manual says both "Rain cover included" and "Rain Cover: No". Do not edit practice.jsonl.
+
+1. [] In section 4.6, write down two or three problems you see, in your own words.
+
+> [!alert] Modules 4, 5, and 6 share .lab-state.json. Run them in order, one notebook at a time.
+
+> [!note] *Success:* v1 is saved, v0 is unchanged, and you have your own list of problems.
+
+===
+
+# Read the insights
+
+Ask Foundry what's wrong, compare it with your own list, and write down the gaps.
+
+1. [] Run section 4.7. It pauses for one minute so traces can arrive.
+1. [] Run section 4.8 to start the insights run. It usually takes about 3 minutes.
+
+   > [!hint] If there is a long wait, open any notebook in labs/more and read it in replay mode. It requires no setup.
+
+1. [] Confirm you see findings with severity and evidence counts, or an explicitly empty result.
+
+   > [!hint] If the result is empty:
+   >
+   > An empty result is not a pass. Check traces_analyzed first. Set START_NEW_INSIGHT_RUN to True only after a completed run saw no traces and ingestion has caught up. Do not resend the practice questions.
+
+1. [] In section 4.9, compare Foundry's findings with your list from section 4.6.
+1. [] In the next code cell, replace the three "Replace me" lines in our_gaps with gaps you actually saw, each starting with one of the six ways trust is lost.
+1. [] Run the cell and confirm it prints and saves your gaps.
+
+   > [!hint] Not sure what to write?
+   >
+   > Paste the insights output into Copilot Chat and ask for three gaps. Check each one against the answer and the manual, then rewrite it in your own words.
+
+> [!note] The "aha" in section 4.10: reading answers and inspecting traces give different views of the same problem. Foundry groups traces into patterns with evidence; you decide which to treat first.
+
+> [!note] *Success:* our_gaps holds real gaps from your traces, ready to become a rubric.
+
+===
+
+# Turn good into a number
+
+Build a rubric from your traces and gaps, then score v0 and v1 with it. Module 5 takes about 14 minutes.
+
+1. [] In VS Code, press **Ctrl+P**, open this notebook, and select the **.venv(3.13.14)(Python3.13.14)** kernel.
+
+   ++05-make-it-better.ipynb++
+
+1. [] Read the promotion rule at the top. It's declared before any score.
+1. [] Run sections 5.1 and 5.2 to generate the rubric. It takes about 1 minute.
+1. [] In section 5.3, compare the generated rubric with the reference rubric.
+
+   > [!note] Ask yourself: does it catch "water-resistant" becoming "waterproof"? Does it penalize answering something that should have been declined?
+
+1. [] Run section 5.4 to upload the datasets and create the evaluation.
+1. [] Run section 5.5 to score v0 and v1 twice each. It takes about 3 minutes.
+1. [] Confirm you see two rows, each with a score, a spread, a token count, and errored at 0.
+
+   > [!note] A gain smaller than the spread could just be noise. Rerunning the cell resumes saved run IDs.
+
+> [!note] *Success:* you have a rubric you've reviewed and a measured score for v0 and v1.
+
+===
+
+# Let the optimizer climb
+
+Let the agent optimizer propose new instructions, then check it didn't win by being too timid.
+
+1. [] In section 5.6, run the cost estimate and confirm it shows call counts and a cost range.
+1. [] Start the optimizer once. It takes about 11 minutes.
+
+   > [!hint] If the cell stops waiting:
+   >
+   > The helper stops waiting after twenty minutes without cancelling the job. Rerun the cell to resume the saved ID. Do not resubmit.
+
+1. [] In section 5.7, read each candidate's score and the winner's instructions in full.
+1. [] Run section 5.8 to stage the candidate as a separate agent. Nothing is promoted yet.
+1. [] In section 5.9, read the guard-case answers and check them against the manual.
+
+> [!note] A cautious agent never invents anything, but it's also useless. Guard cases are questions the manuals do answer, so a timid candidate fails them.
+
+> [!note] *Success:* you read the winning instructions and checked the guard cases yourself.
+
+===
+
+# Decide whether to promote
+
+Test on questions the optimizer never saw, then make an explicit decision.
+
+1. [] Run section 5.10 and confirm you see one column per version: v0, v1, and v2, and one row per way we lose trust.
+1. [] Run section 5.11 and compare the gain on trained questions with the gain on unseen questions.
+1. [] In section 5.12, set REVIEW_APPROVED to True only if the instructions, guard answers, and judge reasons hold up.
+1. [] Run the cell and read the decision.
+
+> [!note] If the candidate doesn't pass, keeping v1 as the v2 checkpoint is a correct result.
+
+> [!note] The "aha" in section 5.11: the gain on trained questions is the gain the optimizer wanted; the gain on unseen questions is the gain you can trust.
+
+> [!note] *Success:* you made an explicit promote-or-retain decision backed by complete evidence.
+
+===
+
+# Try a model router
+
+Change the model, not the instructions: swap the single model for a model router and measure it. Module 6 takes about 14 minutes.
+
+1. [] In VS Code, press **Ctrl+P**, open this notebook, and select the **.venv(3.13.14)(Python3.13.14)** kernel.
+
+   ++06-make-it-optimal.ipynb++
+
+1. [] In section 6.1, leave RUN_ALL_EDITIONS set to False so you compare mr-default only, and leave TOLERANCE as it is.
+
+   > [!note] The rule is fixed before you see any score. Setting True compares all four editions and adds six evaluation runs, so save it for later.
+
+1. [] Run section 6.1 and confirm it loads the rubric, datasets, and baseline from Module 5.
+1. [] In section 6.2, confirm five of the twelve test questions are tagged "easy."
+1. [] In section 6.3, confirm you see the model that served each probe, and compare it with your guess from Module 1.
+1. [] Run section 6.4 to create the router candidate, then section 6.5 to score it.
+
+   > [!note] While you wait, read the box about failed requests. A case that never got a score is not a cheap answer.
+
+1. [] Confirm you see a baseline row and an mr-default row. valid=False means that batch cannot support a comparison.
+
+> [!note] *Success:* you have a router candidate scored with the same rubric and questions as the baseline.
+
+===
+
+# Decide on the router
+
+Find where the router slips, then make an explicit keep-or-promote decision.
+
+1. [] In section 6.6, compare scores by difficulty for the baseline and mr-default.
+1. [] In section 6.7, run the decision rule and the held-out check.
+1. [] Set REVIEW_APPROVED to True only after reading the actual answers and judge evidence, then run the cell.
+1. [] Confirm you see an explicit decision.
+
+   > [!note] Invalid coverage, a category regression, unknown cost, or pending review all mean you keep the baseline. That's a legitimate result.
+
+1. [] Run sections 6.8 and 6.9 and review the heatmap of the whole climb.
+
+> [!note] The "aha" in section 6.12: routing is a hypothesis, not a guaranteed saving. Complete evidence and verified prices tell you whether the trade-off is acceptable.
+
+> [!note] *Success:* you made a router decision from complete evidence and saw the whole climb in one chart.
+
+===
+
+# Finish the lab
+
+Wrap up and hand the environment back.
+
+1. [] Read the final scoreboard. Retaining the original baseline is correct when the evidence does not support a change.
+1. [] Tell the proctor your timings and any failed check messages.
+1. [] End the lab when instructed, using the normal Skillable controls.
+
+> [!alert] Do not run infra/cleanup.sh, purge accounts, or delete the resource group. The lab removes your resources when it ends.
+
+> [!note] *Success:* you climbed from v0 to a measured decision, and you can explain why each step moved the score or didn't.
+
+===
+
+# More: Explore MAI models
+
+Read how Microsoft AI (MAI) models handle a product launch: pictures, a voice, transcripts, and a website. These labs are optional.
+
+1. [] In VS Code, press **Ctrl+P**, open this notebook, and select the **.venv(3.13.14)(Python3.13.14)** kernel.
+
+   ++labs/more/README.md++
+
+1. [] Open 00-set-the-stage.ipynb from the labs/more folder and read the story.
+1. [] Open any of notebooks 01 to 04 and review the saved results.
+
+   > [!note] Every More notebook comes pre-run. Reading it needs no setup and costs nothing, so it is a good use of a long wait in the core modules.
+
+> [!note] The image models are not in this lab environment yet. Read the More labs here and run them live at home with your own subscription.
+
+> [!note] *Success:* you read at least one More notebook in replay mode.
+
+===
+
+## Lab Environment Setup
+
+The table below provides relevant data and links for lab learners and instructors. Click the first link to auto-fill it into the mouse location in the VM. Click the second to copy it into the clipboard for manual pasting elsewhere.
+
+> **For Lab Learners**
+
+|  | Autofill | Copy-Paste |
+|:---|:---|:---|
+| **SKILLABLE VM** | | |
+| Password | ++@lab.VirtualMachine(Win11-Pro-Base).Password++ | +++@lab.VirtualMachine(Win11-Pro-Base).Password+++ |
+| **AZURE LOGIN** | | |
+| Username | ++@lab.CloudPortalCredential(User1).Username++ | +++@lab.CloudPortalCredential(User1).Username+++ |
+| Password | ++@lab.CloudPortalCredential(User1).Password++ | +++@lab.CloudPortalCredential(User1).Password+++ |
+| TAP Token | ++@lab.CloudPortalCredential(User1).AccessToken++ | +++@lab.CloudPortalCredential(User1).AccessToken+++ |
+| **GITHUB LOGIN** |  | |
+| Login with SSO | ++https://github.com/enterprises/skillable-events/sso++ | +++https://github.com/enterprises/skillable-events/sso+++ |
+| | | |
+ 
+> **Using GitHub Credentials for GitHub Copilot**
+
+!IMAGE[eu2xtqsr.png](instructions359314/eu2xtqsr.png)
+
+1. Open a Microsoft Edge Browser tab and visit the GitHub login page (link in the table above).
+2. Use the GitHub SSO option and complete login with Azure as the SSO credential.
+3. Leave the browser open, then launch VS Code on the Desktop VM.
+4. Select "Continue with GitHub login" for Copilot (see image), and authenticate using the SSO portal.
+5. Success-VS Code is now using GHE credentials for Copilot.
+
+> **For Lab Instructors**
+
+|  | Autofill | Copy-Paste |
+|:---|:---|:---|
+| | | |
+| Docs Syntax | ++https://docs.skillable.com/docs/creating-instructions-with-markdown-syntax++ | +++https://docs.skillable.com/docs/creating-instructions-with-markdown-syntax+++ |
+| VM Changes | ++https://docs.skillable.com/docs/committing-changes-to-a-lab++ | +++https://docs.skillable.com/docs/committing-changes-to-a-lab+++ |
+| Import Instructions | ++https://docs.skillable.com/docs/manage-instructions-outside-of-studio++ | +++https://docs.skillable.com/docs/manage-instructions-outside-of-studio+++ |
+| | | |
+
+===
