@@ -1,9 +1,9 @@
-@lab.Title
-
 <!--
-  LAB663 Skillable instructions. GENERATED, do not edit by hand.
+  LAB663 Skillable instructions. 
+  GENERATED, do not edit by hand.  
   Regenerate with: bash instructions/skillable/scripts/generate-skillable-copy.sh
-  Mode: full. Source: the page files in instructions/skillable/
+  Mode: full. 
+  Source: the page files in instructions/skillable/
   Paste everything in this file into the Skillable lab profile (Edit Instructions).
 -->
 
