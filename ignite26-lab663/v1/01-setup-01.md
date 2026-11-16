@@ -1,28 +1,18 @@
 # 1.1 Set up the local environment
 
-**What we'll do:** Confirm the lab deployed our Azure resources and set up our local `.env` file, open the lab in VS Code, and sign in to Azure.
-
-## Check the environment status
-
-The desktop has two text files: one starting with **LAB663** and one with **lab663**. Double-click each to open it in an editor.
-
-1. [] Open **LAB663-deployment-output.txt**, the deployment summary. Check that it says **Result: SUCCEEDED**.
-
-    ![The deployment summary showing Result: SUCCEEDED and the Foundry project details](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/01-setup-01-status-file.png)
-
-1. [] Open the **lab663-deploy-...** file, the run log. Find the line **Populated .env with the deployment settings**.
-
-    ![The run log with the Populated .env line highlighted](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/01-setup-01-run-log.png)
-
-> [+Hint] It says RUNNING or FAILED
->
-> **RUNNING:** the lab is still preparing. Wait a few minutes and open the file again. **FAILED:** don't continue. Raise your hand and share the **Stage** line.
+**What we'll do:** Open the lab in VS Code, check that our `.env` settings file is ready, and sign in to Azure.
 
 ## Open the lab in VS Code
 
 1. [] Open **Visual Studio Code** from the desktop and check that the Explorer shows the **LAB663** folder. If a pop-up offers to install the **Dev Containers** extension, close it. If asked whether you trust the authors, select **Yes**.
 
     ![VS Code open on the LAB663 folder, with the Dev Containers pop-up at the bottom right](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/01-setup-01-vscode-open.png)
+
+1. [] In the Explorer, check that a **.env** file is listed near the bottom of the **LAB663** folder. The lab setup wrote it with our project's settings, and every notebook reads it. We don't need to open it.
+
+    > [+Hint] I don't see .env
+    >
+    > The lab may still be preparing. Wait a few minutes and check the Explorer again. If it's still missing, raise your hand and ask a proctor for help.
 
 1. [] Open a terminal with **Terminal > New Terminal**, or press **Ctrl+Shift+backtick**. If you don't see the **Terminal** menu, it's under **...** in the menu bar.
 
@@ -45,4 +35,4 @@ The desktop has two text files: one starting with **LAB663** and one with **lab6
 
 ---
 
-> [!Note] **Success:** We just confirmed our resources and `.env` are ready, opened the lab, and signed in to Azure.
+> [!Note] **Success:** We just opened the lab, confirmed our `.env` is ready, and signed in to Azure.
