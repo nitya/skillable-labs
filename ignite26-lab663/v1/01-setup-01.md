@@ -8,6 +8,7 @@
 
     ![VS Code open on the LAB663 folder, with the Dev Containers pop-up at the bottom right](https://raw.githubusercontent.com/nitya/skillable-labs/refs/heads/ignite26-lab663/ignite26-lab663/v1/screenshots/01-setup-01-vscode-open.png)
 
+1. [] Close the **Welcome** tab that VS Code opens by default: select the **X** on the tab. We won't need it.
 1. [] In the Explorer, check that a **.env** file is listed near the bottom of the **LAB663** folder. The lab setup wrote it with our project's settings, and every notebook reads it. We don't need to open it.
 
     > [+Hint] I don't see .env
